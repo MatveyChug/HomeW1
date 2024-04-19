@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Палитра для рисования"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.myapplication.ArtView
+        android:id="@+id/art"
+        android:layout_width="381dp"
+        android:layout_height="598dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="70dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="168dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageButton
+            android:id="@+id/buttonPallete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:backgroundTintMode="add"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/color_palette" />
+
+        <ImageButton
+            android:id="@+id/buttonClear"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:backgroundTintMode="add"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/erase" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonMenu"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="252dp"
+        android:background="@null"
+        android:backgroundTint="@null"
+        android:backgroundTintMode="add"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:srcCompat="@drawable/polygon"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
